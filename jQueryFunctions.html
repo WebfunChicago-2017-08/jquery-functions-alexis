@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="topBar">
+        <button id="toggleButton">Toggle</button>
+        <p>Click the left button to see some slide</p>
+    </div> <br>
+    <div id="classArea">
+        <h1>Add Class</h1>
+        <button id="addClassButton">Add Class</button>
+        <p>Click the button to add class 'red' to this paragraph</p>
+    </div> <br>
+    <div>
+        <h1>Toggle</h1>
+        <button id="fadeInButton">Toggle Minion</button>
+        <p>Click the button to slidetoggle a hidden image</p><br>
+        <img id="minion" src="images/minion00.jpg" alt="HOLA">
+    </div> <br>
+    <div id="appendDiv">
+        <h1>Append</h1>
+        <button id="appendButton">Append</button>
+        <p>Click the button to append a new paragraph</p>
+    </div> <br>
+    <div>
+        <h1>Buttons</h1>
+        <button id="hideButton">Hide paragraphs</button>
+        <button id="showButton">Show paragraphs</button>
+        <button id="toggleHeaderButton">Toggle headers</button>
+    </div>
+</body>
+<script type="text/javascript">
+    // var newWords = "<p class=\"ofTheBlue\">What's going ON?</p>";
+    $(document).ready(function(){
+        $('#addClassButton').click(function(){
+            $('#classArea p').css('color', 'red');
+        })
+
+        $("#hideButton").click(function(){
+            $("p").hide("slow");
+        })
+
+        $("#showButton").click(function(){
+            $("p").show("fast");
+        })
+
+        $("#toggleHeaderButton").click(function(){
+            $('h1').toggle("slow");
+        })
+
+        $('#toggleButton').click(function(){
+            $(".topBar p").slideToggle("linear");
+        })
+
+        $("#fadeInButton").click(function(){
+            $("#minion").toggle("slow");
+        })
+
+        $("#appendButton").click(function(){
+            $("#appendDiv").append("<br><p class='outOfBlue'>What's going ON?</p>");
+        })
+
+
+    })
+</script>
+</html>

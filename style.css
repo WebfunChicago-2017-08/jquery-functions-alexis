@@ -1,0 +1,44 @@
+p{
+    display: inline-block;
+    vertical-align: top;
+}
+
+div{
+    display: inline-block;
+    border: 3px solid black;
+    border-style: none none solid none;
+}
+
+h1{
+    text-align: center;
+}
+
+.red{
+    color: red;
+}
+
+button{
+    margin: 10px;
+}
+
+.topBar p{
+    font-size: 26px;
+    color: purple;
+    background-color: skyblue;    
+    padding-right: 49px;
+}
+
+.topBar{
+    background: purple;
+    display: block;
+}
+
+img{
+    width: 85px;
+}
+
+.outOfBlue{
+    font-size: 24px;
+    color: peru;
+    vertical-align: top;
+}
